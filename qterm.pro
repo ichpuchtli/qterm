@@ -10,10 +10,12 @@ TARGET    = qterm
 MOC_DIR = bin
 OBJECTS_DIR = bin
 
-SOURCES  += main.cpp terminal.cpp
-HEADERS  += terminal.h
+SOURCES  += main.cpp terminal.cpp tagdbadapter.cpp
+HEADERS  += terminal.h tagdbadapter.h
 
-QT       += core serialport enginio
+OTHER_FILES += qterm.ini
+
+QT       += core serialport enginio sql
 QT       -= gui
 
 CONFIG   += console
